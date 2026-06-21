@@ -38,9 +38,9 @@ phases:
       - echo "Validando projeto dbt"
       - cd dbt
       - dbt debug --profiles-dir .
-      - dbt parse
-      - dbt compile
-      - dbt test
+      - dbt parse --profiles-dir .
+      - dbt compile --profiles-dir .
+      - dbt test --profiles-dir .
       - cd ..
 
       - echo "Enviando scripts Glue para o S3"
