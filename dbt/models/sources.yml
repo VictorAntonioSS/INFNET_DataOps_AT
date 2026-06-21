@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: silver
+    database: AwsDataCatalog
+    schema: dataops_at
+    tables:
+      - name: clientes
+      - name: produtos
+      - name: pedidos
+      - name: itens_pedido
