@@ -1,0 +1,60 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_REGION: "sa-east-1"
+    S3_BUCKET: "amzn-dataops-at"
+    DBT_PROFILES_DIR: "dbt"
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install --upgrade pip
+      - pip install dbt-core dbt-athena-community
+
+  pre_build:
+    commands:
+      - echo "Criando profiles.yml do dbt"
+      - |
+        cat > dbt/profiles.yml <<EOF
+        dbt_at_dataops:
+          target: dev
+          outputs:
+            dev:
+              type: athena
+              region_name: sa-east-1
+              database: AwsDataCatalog
+              schema: dataops_at
+              s3_staging_dir: s3://amzn-dataops-at/athena-query-results/
+              s3_data_dir: s3://amzn-dataops-at/Gold/dbt/
+              work_group: primary
+              threads: 4
+        EOF
+
+  build:
+    commands:
+      - echo "Validando projeto dbt"
+      - cd dbt
+      - dbt debug
+      - dbt parse
+      - dbt compile
+      - dbt test
+      - cd ..
+
+      - echo "Enviando scripts Glue para o S3"
+      - aws s3 cp glue/clientes_bronze_silver.py s3://amzn-dataops-at/scripts/glue/clientes_bronze_silver.py
+      - aws s3 cp glue/produtos_bronze_silver.py s3://amzn-dataops-at/scripts/glue/produtos_bronze_silver.py
+      - aws s3 cp glue/pedidos_bronze_silver.py s3://amzn-dataops-at/scripts/glue/pedidos_bronze_silver.py
+      - aws s3 cp glue/itens_pedido_bronze_silver.py s3://amzn-dataops-at/scripts/glue/itens_pedido_bronze_silver.py
+
+      - echo "Atualizando Glue Jobs"
+      - aws glue update-job --job-name dataops_at_job_clientes_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/clientes_bronze_silver.py","PythonVersion":"3"}}'
+      - aws glue update-job --job-name dataops_at_job_produtos_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/produtos_bronze_silver.py","PythonVersion":"3"}}'
+      - aws glue update-job --job-name dataops_at_job_pedidos_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/pedidos_bronze_silver.py","PythonVersion":"3"}}'
+      - aws glue update-job --job-name dataops_at_job_itens_pedido_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/itens_pedido_bronze_silver.py","PythonVersion":"3"}}'
+
+artifacts:
+  files:
+    - '**/*'
