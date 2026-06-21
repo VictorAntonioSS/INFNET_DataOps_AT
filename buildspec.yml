@@ -37,7 +37,7 @@ phases:
     commands:
       - echo "Validando projeto dbt"
       - cd dbt
-      - dbt debug
+      - dbt debug --profiles-dir .
       - dbt parse
       - dbt compile
       - dbt test
