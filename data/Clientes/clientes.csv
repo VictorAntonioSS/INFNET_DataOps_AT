@@ -1,0 +1,101 @@
+﻿id_cliente,nome,email,cpf,cidade
+1,Brenda Alves,samuel32@example.net,189.430.652-05,São Paulo
+2,Thiago Pereira,novaismiguel@example.net,863.742.091-50,Rio de Janeiro
+3,Dr. Eduardo Cunha,gustavo16@example.org,594.603.817-66,Porto Alegre
+4,Laís Pires,matheus10@example.net,341.670.952-70,Curitiba
+5,Maria Clara Castro,daniela34@example.net,123.975.840-50,Curitiba
+6,Lunna Vargas,da-conceicaobenicio@example.com,641.782.953-73,Belo Horizonte
+7,Natália Casa Grande,joao-lucas38@example.net,468.215.307-26,São Paulo
+8,Eduardo Pires,laviniapeixoto@example.org,697.428.053-00,Fortaleza
+9,Zoe Sá,carolina14@example.com,270.569.148-02,São Paulo
+10,Letícia Porto,leandrofreitas@example.org,890.423.761-04,Manaus
+11,Isaque Araújo,emanuelbarros@example.net,712.853.649-37,Recife
+12,Vitor Hugo Sá,ana-liviaguerra@example.net,578.019.643-57,Rio de Janeiro
+13,Heloísa Pastor,anthony-gabrielbarbosa@example.net,031.926.785-77,Rio de Janeiro
+14,Vitor Hugo Cardoso,yda-cruz@example.com,631.058.274-71,São Paulo
+15,Ana Júlia Rocha,araujoisis@example.net,513.864.709-10,Curitiba
+16,João Lucas Martins,dommacedo@example.net,108.795.342-14,Curitiba
+17,Murilo Araújo,gabriellyabreu@example.com,479.358.602-38,Fortaleza
+18,Henrique Araújo,souzaana-sophia@example.org,072.946.158-02,Manaus
+19,Isabela Guerra,nunesthales@example.net,901.354.278-60,Rio de Janeiro
+20,Luara da Costa,isabela24@example.com,510.349.762-06,Fortaleza
+21,Julia Cardoso,davi-miguel35@example.com,274.856.091-49,Curitiba
+22,Bella Carvalho,igor18@example.org,493.521.678-64,Fortaleza
+23,Benjamim Borges,cda-mota@example.org,524.193.780-32,Recife
+24,Breno Sales,zoeandrade@example.com,982.310.754-88,Curitiba
+25,Sr. Josué Rios,fogacajoana@example.net,239.618.045-24,Brasília
+26,Isadora da Mata,henriquegarcia@example.org,738.692.405-47,Manaus
+27,Gael Guerra,agatha14@example.com,865.092.143-42,Porto Alegre
+28,Cauê Peixoto,uferreira@example.com,681.347.205-44,Rio de Janeiro
+29,Vicente Nascimento,emanuellalopes@example.org,591.824.637-19,Belo Horizonte
+30,Dr. Juan Novaes,matheusleao@example.net,624.370.815-26,Recife
+31,Luna Martins,rmacedo@example.org,872.509.463-74,Salvador
+32,Luana Câmara,juanalves@example.org,371.964.825-73,Porto Alegre
+33,Maria Liz da Cruz,anthonysa@example.org,632.954.807-29,Belo Horizonte
+34,Rafael Carvalho,hrios@example.net,957.486.321-28,Curitiba
+35,Renan Machado,thales48@example.com,347.052.198-05,Salvador
+36,Sr. Davi Miguel Cassiano,hadassasales@example.org,316.924.780-87,São Paulo
+37,Otto Gomes,teixeiragabrielly@example.com,054.638.179-01,São Paulo
+38,Pedro Henrique Mendonça,gomesbarbara@example.net,627.145.093-80,Recife
+39,Paulo Carvalho,dcirino@example.com,653.728.914-91,São Paulo
+40,Bruno Melo,souzavalentina@example.org,531.690.482-60,Salvador
+41,Eduardo da Costa,maria-juliarios@example.org,937.526.140-99,Salvador
+42,Leonardo Caldeira,das-nevesfernanda@example.com,319.052.647-80,Manaus
+43,Dr. Léo Azevedo,apollo67@example.org,657.813.924-91,Porto Alegre
+44,Zoe Vasconcelos,bmartins@example.net,945.610.278-58,Rio de Janeiro
+45,Maria Helena Fernandes,monteiroaylla@example.org,735.629.481-82,Brasília
+46,Alexia Moreira,enzo-gabrielda-costa@example.net,673.589.402-29,Fortaleza
+47,Henry Guerra,ana-lauraribeiro@example.net,579.384.216-00,São Paulo
+48,Leandro da Cunha,isaquesilveira@example.org,512.863.749-28,Recife
+49,Gael da Rocha,eloahcavalcanti@example.com,082.795.634-74,São Paulo
+50,Rebeca Caldeira,oliveiraalice@example.com,795.102.384-14,Fortaleza
+51,Rebeca Barbosa,cassianokaique@example.net,413.097.825-04,Porto Alegre
+52,Melina da Rosa,kdas-neves@example.net,013.582.974-79,Manaus
+53,Yuri Barbosa,andrejesus@example.com,974.012.835-14,Salvador
+54,Igor da Luz,laiscamargo@example.net,324.610.795-52,Manaus
+55,Laura Macedo,martinsana-julia@example.net,647.308.512-26,Curitiba
+56,Isis Alves,da-conceicaoasafe@example.net,402.396.781-50,São Paulo
+57,Rebeca Borges,aferreira@example.com,512.739.648-37,Rio de Janeiro
+58,Ana Carolina Marques,diasthiago@example.com,160.543.872-35,Curitiba
+59,Maria Cecília Pinto,cpires@example.org,342.795.086-74,Porto Alegre
+60,Srta. Luana Novaes,novaesjoana@example.org,317.058.924-50,São Paulo
+61,Júlia Leão,pmelo@example.com,826.145.703-62,Curitiba
+62,Manuela Viana,andre44@example.net,972.346.815-82,São Paulo
+63,Luna Correia,hadassada-conceicao@example.com,057.836.149-39,Recife
+64,Theodoro Pastor,guilherme71@example.net,702.351.849-50,Porto Alegre
+65,Dr. Bruno Farias,odias@example.net,780.491.253-60,Brasília
+66,Beatriz Teixeira,macedolucas-gabriel@example.net,408.276.913-78,Salvador
+67,Joaquim Moura,rnunes@example.org,291.436.750-34,Belo Horizonte
+68,Ravi Porto,maria-clara40@example.com,482.037.951-88,Salvador
+69,Sra. Mirella da Rosa,hadassamendes@example.org,365.427.081-62,Salvador
+70,Anthony Nunes,pereiramaysa@example.com,359.814.270-60,Curitiba
+71,Aylla Pires,das-neveslunna@example.org,952.078.364-47,Porto Alegre
+72,Vitor Hugo Fonseca,lucas47@example.com,517.089.324-88,São Paulo
+73,Miguel Albuquerque,stella17@example.com,465.071.389-75,Manaus
+74,Hellena Ramos,portomaria-fernanda@example.net,461.705.289-58,Belo Horizonte
+75,Isaac Nascimento,hellenamarques@example.com,862.350.971-40,Fortaleza
+76,Arthur Gabriel Sales,pedro-henrique77@example.org,519.472.086-67,Curitiba
+77,Davi Marques,ribeirootavio@example.net,908.621.457-67,Belo Horizonte
+78,Yuri Costela,ravi-luccafarias@example.org,904.615.283-98,Brasília
+79,Amanda Cardoso,fogacarenan@example.net,502.781.369-40,Recife
+80,Srta. Olívia Machado,olivia91@example.com,830.564.217-80,Porto Alegre
+81,Rhavi Guerra,grodrigues@example.com,718.249.035-88,Fortaleza
+82,Lunna Garcia,maria89@example.com,193.768.542-09,Curitiba
+83,Maria Vitória Siqueira,diasleticia@example.com,452.830.967-00,Salvador
+84,Aylla Souza,jose-pedro80@example.net,895.703.241-04,Rio de Janeiro
+85,Srta. Laura Peixoto,clarice19@example.net,327.108.456-44,Curitiba
+86,Heloisa Lima,pereiravitor@example.org,248.960.173-31,Rio de Janeiro
+87,Diego Sousa,borgessofia@example.org,697.218.435-55,Salvador
+88,Antonella Aragão,levisa@example.net,014.356.728-44,Recife
+89,Júlia Cunha,ferreiralorena@example.org,479.013.682-50,Porto Alegre
+90,Heitor Vargas,thomasda-rocha@example.com,107.539.468-66,São Paulo
+91,Maria Barbosa,csousa@example.com,071.624.358-07,Curitiba
+92,Dra. Maria Vitória da Rocha,guerraasafe@example.com,275.036.189-30,Manaus
+93,Anna Liz Gonçalves,camila35@example.org,189.467.250-01,Salvador
+94,Cauã Casa Grande,miguel29@example.org,127.345.689-00,Curitiba
+95,Luara Cassiano,eazevedo@example.com,490.287.613-22,Brasília
+96,Benjamin Freitas,eduardo19@example.net,867.490.325-83,Recife
+97,Dr. Theodoro Cassiano,machadogustavo@example.com,182.093.476-40,Brasília
+98,Dr. João Miguel Gomes,vvasconcelos@example.net,905.826.317-77,Belo Horizonte
+99,Dra. Clarice Farias,pachecojoao-miguel@example.com,462.950.731-07,Porto Alegre
+100,Luísa Cardoso,ramoslavinia@example.net,509.217.648-20,Belo Horizonte
