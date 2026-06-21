@@ -49,12 +49,7 @@ phases:
       - aws s3 cp glue/pedidos_bronze_silver.py s3://amzn-dataops-at/scripts/glue/pedidos_bronze_silver.py
       - aws s3 cp glue/itens_pedido_bronze_silver.py s3://amzn-dataops-at/scripts/glue/itens_pedido_bronze_silver.py
 
-      - echo "Atualizando Glue Jobs"
-      - aws glue update-job --job-name dataops_at_job_clientes_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/clientes_bronze_silver.py","PythonVersion":"3"}}'
-      - aws glue update-job --job-name dataops_at_job_produtos_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/produtos_bronze_silver.py","PythonVersion":"3"}}'
-      - aws glue update-job --job-name dataops_at_job_pedidos_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/pedidos_bronze_silver.py","PythonVersion":"3"}}'
-      - aws glue update-job --job-name dataops_at_job_itens_pedido_bronze_silver --job-update '{"Command":{"Name":"glueetl","ScriptLocation":"s3://amzn-dataops-at/scripts/glue/itens_pedido_bronze_silver.py","PythonVersion":"3"}}'
-
+      
 artifacts:
   files:
     - '**/*'
