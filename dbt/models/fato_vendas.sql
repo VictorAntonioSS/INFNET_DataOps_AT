@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select
     cast(i.id_item as integer) as id_item,
     cast(i.id_pedido as integer) as id_pedido,
@@ -6,7 +8,10 @@ select
     cast(i.quantidade as integer) as quantidade,
     cast(i.valor_unitario as double) as valor_unitario,
     cast(i.valor_total_item as double) as valor_total_item,
-    cast(p.data_pedido as date) as data_pedido
+    cast(p.data_pedido as date) as data_pedido,
+    c.cpf
 from {{ source('silver', 'itens_pedido') }} i
 left join {{ source('silver', 'pedidos') }} p
     on cast(i.id_pedido as integer) = cast(p.id_pedido as integer)
+left join {{ ref('dim_cliente') }} c
+    on cast(p.id_cliente as integer) = c.id_cliente
