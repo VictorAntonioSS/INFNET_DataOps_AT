@@ -9,3 +9,43 @@ sources:
       - name: produtos
       - name: pedidos
       - name: itens_pedido
+
+models:
+  - name: dim_cliente
+    columns:
+      - name: id_cliente
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+
+  - name: dim_produto
+    columns:
+      - name: id_produto
+        tests:
+          - not_null
+          - unique
+      - name: preco
+        tests:
+          - not_null
+
+  - name: fato_vendas
+    columns:
+      - name: id_item
+        tests:
+          - not_null
+          - unique
+      - name: id_pedido
+        tests:
+          - not_null
+      - name: id_cliente
+        tests:
+          - not_null
+      - name: id_produto
+        tests:
+          - not_null
+      - name: valor_total_item
+        tests:
+          - not_null

@@ -2,6 +2,7 @@ select
     cast(i.id_item as integer) as id_item,
     cast(i.id_pedido as integer) as id_pedido,
     cast(p.id_cliente as integer) as id_cliente,
+    c.cpf as cpf,
     cast(i.id_produto as integer) as id_produto,
     cast(i.quantidade as integer) as quantidade,
     cast(i.valor_unitario as double) as valor_unitario,
@@ -10,3 +11,5 @@ select
 from {{ source('silver', 'itens_pedido') }} i
 left join {{ source('silver', 'pedidos') }} p
     on cast(i.id_pedido as integer) = cast(p.id_pedido as integer)
+left join {{ source('silver', 'clientes') }} c
+    on cast(p.id_cliente as integer) = cast(c.id_cliente as integer)
