@@ -4,48 +4,83 @@ sources:
   - name: silver
     database: AwsDataCatalog
     schema: dataops_at
+    description: "Fonte da camada Silver catalogada no AWS Glue Data Catalog e consultada pelo Athena."
     tables:
       - name: clientes
+        description: "Tabela Silver contendo dados cadastrais dos clientes."
       - name: produtos
+        description: "Tabela Silver contendo dados dos produtos."
       - name: pedidos
+        description: "Tabela Silver contendo dados dos pedidos realizados."
       - name: itens_pedido
+        description: "Tabela Silver contendo os itens vinculados aos pedidos."
 
 models:
   - name: dim_cliente
+    description: "Dimensão de clientes usada para análises cadastrais e relacionamento com vendas."
     columns:
       - name: id_cliente
+        description: "Identificador único do cliente."
         tests:
           - not_null
           - unique
+      - name: nome
+        description: "Nome do cliente."
       - name: email
+        description: "Endereço de e-mail do cliente."
         tests:
           - not_null
+      - name: cpf
+        description: "CPF do cliente. Coluna considerada dado sensível."
+      - name: cidade
+        description: "Cidade do cliente."
 
   - name: dim_produto
+    description: "Dimensão de produtos usada para análises de catálogo, categorias e preços."
     columns:
       - name: id_produto
+        description: "Identificador único do produto."
         tests:
           - not_null
           - unique
+      - name: nome_produto
+        description: "Nome comercial do produto."
+      - name: categoria
+        description: "Categoria do produto."
       - name: preco
+        description: "Preço unitário do produto."
         tests:
           - not_null
 
   - name: fato_vendas
+    description: "Tabela fato de vendas contendo pedidos, clientes, produtos, quantidades, valores e data da venda."
     columns:
       - name: id_item
+        description: "Identificador único do item vendido."
         tests:
           - not_null
           - unique
       - name: id_pedido
+        description: "Identificador do pedido associado à venda."
         tests:
           - not_null
       - name: id_cliente
+        description: "Identificador do cliente associado ao pedido."
         tests:
           - not_null
+      - name: cpf
+        description: "CPF do cliente associado à venda. Coluna sensível protegida por permissões no Lake Formation."
       - name: id_produto
+        description: "Identificador do produto vendido."
         tests:
           - not_null
+      - name: quantidade
+        description: "Quantidade de unidades vendidas."
+      - name: valor_unitario
+        description: "Valor unitário do produto no momento da venda."
       - name: valor_total_item
+        description: "Valor total do item vendido."
         tests:
           - not_null
+      - name: data_pedido
+        description: "Data em que o pedido foi realizado."
